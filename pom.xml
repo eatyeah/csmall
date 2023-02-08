@@ -18,6 +18,7 @@
 
     <modules>
         <module>csmall-stock</module>
+        <module>csmall-commons</module>
     </modules>
 
     <properties>
