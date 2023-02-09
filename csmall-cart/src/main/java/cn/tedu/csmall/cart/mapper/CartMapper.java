@@ -23,7 +23,7 @@ public interface CartMapper {
     // 删除购物车商品的方法
     @Delete("delete from cart_tbl where user_id={userId} and commodity_code=#{commodityCode}")
     int deleteCartByUserIdAndCommodityCode(
-            @Param("userId") String userID,
-            String commodityCode);
+            @Param("userId") String userId,
+            @Param("commodityCode") String commodityCode);
 
 }
