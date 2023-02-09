@@ -2,6 +2,7 @@ package cn.tedu.csmall.commons.restful;
 
 /**
  * 错误代码枚举类型
+ * @author daiyang
  */
 public enum ResponseCode {
 
