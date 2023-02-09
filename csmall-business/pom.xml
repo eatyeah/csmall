@@ -28,6 +28,11 @@
             <artifactId>csmall-commons</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <!--支持项目注册到Nacos注册中心依赖-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

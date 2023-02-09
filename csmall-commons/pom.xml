@@ -39,12 +39,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!-- 当前项目有功能支持分页,需要添加PageHelper分页支持 -->
-<!--        <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper</artifactId>
-            <version>5.2.0</version>
-        </dependency>-->
     </dependencies>
+
 
 </project>
