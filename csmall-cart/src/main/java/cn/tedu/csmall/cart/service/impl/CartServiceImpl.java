@@ -32,6 +32,7 @@ public class CartServiceImpl implements IcartService {
 
     @Override
     public void deleteUserCart(String userId, String commodityCode) {
-
+        cartMapper.deleteCartByUserIdAndCommodityCode(userId, commodityCode);
+        log.info("购物车商品删除成功");
     }
 }
