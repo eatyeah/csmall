@@ -2,6 +2,7 @@ package cn.tedu.csmall.commons.pojo.restful;
 
 
 import cn.tedu.csmall.commons.exception.CoolSharkServiceException;
+import cn.tedu.csmall.commons.restful.ResponseCode;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -39,7 +40,7 @@ public class JsonResult<T> implements Serializable {
 
     public static JsonResult ok(String message){
         JsonResult jsonResult=new JsonResult();
-        jsonResult.setState(ResponseCode.OK.getValue());
+        jsonResult.setState(cn.tedu.csmall.commons.restful.ResponseCode.OK.getValue());
         jsonResult.setMessage(message);
         jsonResult.setData(null);
         return jsonResult;
@@ -51,7 +52,7 @@ public class JsonResult<T> implements Serializable {
      */
     public static <T> JsonResult<T> ok(String message,T data) {
         JsonResult<T> jsonResult = new JsonResult<>();
-        jsonResult.setState(ResponseCode.OK.getValue());
+        jsonResult.setState(cn.tedu.csmall.commons.restful.ResponseCode.OK.getValue());
         jsonResult.setData(data);
         return jsonResult;
     }
@@ -72,7 +73,7 @@ public class JsonResult<T> implements Serializable {
      * @param e            "失败"时抛出的异常对象
      * @return 响应结果对象
      */
-    public static JsonResult<Void> failed(ResponseCode responseCode, Throwable e) {
+    public static JsonResult<Void> failed(cn.tedu.csmall.commons.restful.ResponseCode responseCode, Throwable e) {
         return failed(responseCode, e.getMessage());
     }
 
