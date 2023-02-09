@@ -28,7 +28,7 @@ public class Knife4jConfiguration {
     /**
      * 分组名称
      */
-    private String groupName = "base-business";
+    private String groupName = "base-cart";
     /**
      * 主机名
      */
@@ -36,11 +36,11 @@ public class Knife4jConfiguration {
     /**
      * 标题
      */
-    private String title = "酷鲨商城项目案例在线API文档--基础businessr-web实例";
+    private String title = "酷鲨商城项目案例在线API文档--基础cart-web实例";
     /**
      * 简介
      */
-    private String description = "构建基础business-web项目,实现购买";
+    private String description = "构建基础cart-web项目,实现购物车管理";
     /**
      * 服务条款URL
      */
