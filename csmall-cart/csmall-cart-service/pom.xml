@@ -13,6 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>csmall-cart-service</name>
     <description>csmall-cart-service</description>
+
     <dependencies>
         <dependency>
             <groupId>cn.tedu</groupId>
