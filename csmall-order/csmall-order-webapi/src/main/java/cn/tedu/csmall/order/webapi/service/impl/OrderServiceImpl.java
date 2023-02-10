@@ -3,6 +3,7 @@ package cn.tedu.csmall.order.webapi.service.impl;
 import cn.tedu.csmall.cart.service.ICartService;
 import cn.tedu.csmall.commons.pojo.pojo.order.dto.OrderAddDTO;
 import cn.tedu.csmall.commons.pojo.pojo.order.model.Order;
+import cn.tedu.csmall.commons.pojo.pojo.stock.dto.StockReduceCountDTO;
 import cn.tedu.csmall.order.service.IOrderService;
 import cn.tedu.csmall.order.webapi.mapper.OrderMapper;
 import cn.tedu.csmall.stock.service.IStockService;
@@ -39,6 +40,14 @@ public class OrderServiceImpl implements IOrderService {
 
     @Override
     public void orderAdd(OrderAddDTO orderAddDTO) {
+        StockReduceCountDTO countDTO = new StockReduceCountDTO();
+        countDTO.setCommodityCode(orderAddDTO.getCommodityCode());
+        countDTO.setReduceCount(orderAddDTO.getCount());
+        stockService.reduceCommodityCount(countDTO);
+        cartService.deleteUserCart(
+                orderAddDTO.getUserId(),
+                orderAddDTO.getCommodityCode());
+
         Order order = new Order();
         BeanUtils.copyProperties(orderAddDTO, order);
         orderMapper.insertOrder(order);
