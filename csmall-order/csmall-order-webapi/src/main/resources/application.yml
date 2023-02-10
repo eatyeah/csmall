@@ -3,7 +3,7 @@ server:
 #公共配置
 mybatis:
   configuration:
-    cache-enabled: false   # 不启用mybatis缓存(关闭的是mybatis的二级缓存)
+    cache-enabled: false   # 不启用mybatis缓存
     map-underscore-to-camel-case: true # 映射支持驼峰命名法
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 将运行的sql输出到控制台
 knife4j:
@@ -22,4 +22,3 @@ knife4j:
 spring:
   profiles:
     active: dev
-

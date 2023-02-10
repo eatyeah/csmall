@@ -1,6 +1,6 @@
 package cn.tedu.csmall.stock.service;
 
-import cn.tedu.csmall.commons.pojo.pojo.stock.dto.StockReduceCountDTO;
+import cn.tedu.csmall.commons.pojo.stock.dto.StockReduceCountDTO;
 
 /**
  * @Description: 减少库存的业务逻辑方法

@@ -1,4 +1,4 @@
-package cn.tedu.csmall.commons.pojo.pojo.stock.dto;
+package cn.tedu.csmall.commons.pojo.stock.dto;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

@@ -12,11 +12,7 @@
     <artifactId>csmall-order-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>csmall-order-service</name>
-    <description>csmall-order-service</description>
-    <properties>
-        <java.version>17</java.version>
-    </properties>
-
+    <description>Demo project for Spring Boot</description>
     <dependencies>
         <dependency>
             <groupId>cn.tedu</groupId>
@@ -24,14 +20,4 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>

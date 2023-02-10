@@ -1,8 +1,7 @@
-package cn.tedu.csmall.commons.pojo.pojo.order.dto;
+package cn.tedu.csmall.commons.pojo.order.dto;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.models.auth.In;
 import lombok.Data;
 
 import java.io.Serializable;

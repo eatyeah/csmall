@@ -1,4 +1,4 @@
-package cn.tedu.csmall.commons.pojo.pojo.order.model;
+package cn.tedu.csmall.commons.pojo.order.model;
 
 import lombok.Data;
 

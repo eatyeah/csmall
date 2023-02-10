@@ -1,4 +1,4 @@
-package cn.tedu.csmall.commons.pojo.pojo.stock.model;
+package cn.tedu.csmall.commons.pojo.stock.model;
 
 import lombok.Data;
 

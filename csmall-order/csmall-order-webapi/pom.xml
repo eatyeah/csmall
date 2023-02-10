@@ -12,7 +12,7 @@
     <artifactId>csmall-order-webapi</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>csmall-order-webapi</name>
-    <description>csmall-order-webapi</description>
+    <description>Demo project for Spring Boot</description>
     <dependencies>
         <!--web实例-->
         <dependency>
@@ -50,13 +50,10 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
-        <!--  Dubbo 在SpringCloud中使用的依赖 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-dubbo</artifactId>
         </dependency>
-        <!--  当前项目需要在业务逻辑层实现类中实现业务逻辑层接口
-           所以业务逻辑层接口的依赖也要添加(依赖csmall-stock-service)-->
         <dependency>
             <groupId>cn.tedu</groupId>
             <artifactId>csmall-order-service</artifactId>
@@ -73,6 +70,19 @@
             <artifactId>csmall-cart-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <!--   Seata和SpringBoot整合依赖     -->
+        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-spring-boot-starter</artifactId>
+        </dependency>
+        <!--  Seata 完成分布式事务的两个相关依赖(Seata会自动使用其中的资源)  -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
     </dependencies>
-
 </project>

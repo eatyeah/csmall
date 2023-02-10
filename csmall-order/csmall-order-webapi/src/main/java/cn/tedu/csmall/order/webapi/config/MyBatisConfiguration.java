@@ -3,14 +3,8 @@ package cn.tedu.csmall.order.webapi.config;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * @Description:
- * @Author: sweeterjava@163.com
- * @Date: 2023/2/9
- * @Time: 15:08
- */
-
 @Configuration
+// MyBatis框架要求扫描指定的包,才能使框架生效
 @MapperScan("cn.tedu.csmall.order.webapi.mapper")
-public class MybatisConfiguration {
+public class MyBatisConfiguration {
 }

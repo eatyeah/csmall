@@ -1,6 +1,5 @@
 package cn.tedu.csmall.order.webapi.controller;
 
-import cn.tedu.csmall.commons.pojo.pojo.order.dto.OrderAddDTO;
 import cn.tedu.csmall.commons.restful.JsonResult;
 import cn.tedu.csmall.order.service.IOrderService;
 import io.swagger.annotations.Api;
@@ -9,13 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-/**
- * @Description:
- * @Author: sweeterjava@163.com
- * @Date: 2023/2/9
- * @Time: 16:12
- */
+import cn.tedu.csmall.commons.pojo.order.dto.OrderAddDTO;
 
 @RestController
 @RequestMapping("/base/order")
@@ -28,6 +21,8 @@ public class OrderController {
     @ApiOperation("新增订单功能")
     public JsonResult orderAdd(OrderAddDTO orderAddDTO){
         orderService.orderAdd(orderAddDTO);
-        return JsonResult.ok("新增订单完成");
+        return JsonResult.ok("新增订单完成!");
     }
+
+
 }
