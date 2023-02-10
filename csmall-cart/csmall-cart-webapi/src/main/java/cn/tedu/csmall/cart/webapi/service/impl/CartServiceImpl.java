@@ -1,6 +1,6 @@
 package cn.tedu.csmall.cart.webapi.service.impl;
 
-import cn.tedu.csmall.cart.service.IcartService;
+import cn.tedu.csmall.cart.service.ICartService;
 import cn.tedu.csmall.cart.webapi.mapper.CartMapper;
 import cn.tedu.csmall.commons.pojo.cart.dto.CartAddDTO;
 import cn.tedu.csmall.commons.pojo.cart.model.Cart;
@@ -20,7 +20,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 @DubboService
-public class CartServiceImpl implements IcartService {
+public class CartServiceImpl implements ICartService {
     @Autowired
     private CartMapper cartMapper;
 

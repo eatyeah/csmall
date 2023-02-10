@@ -9,7 +9,7 @@ import cn.tedu.csmall.commons.pojo.cart.dto.CartAddDTO;
  * @Date: 2023/2/9
  * @Time: 15:24
  */
-public interface IcartService {
+public interface ICartService {
     // 新增购物车
     void cartAdd(CartAddDTO cartAddDTO);
     // 删除购物车

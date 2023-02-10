@@ -1,6 +1,6 @@
 package cn.tedu.csmall.cart.webapi.controller;
 
-import cn.tedu.csmall.cart.service.IcartService;
+import cn.tedu.csmall.cart.service.ICartService;
 import cn.tedu.csmall.commons.pojo.cart.dto.CartAddDTO;
 import cn.tedu.csmall.commons.restful.JsonResult;
 import io.swagger.annotations.Api;
@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api("购物车管理模块")
 public class CartController {
     @Autowired
-    private IcartService cartService;
+    private ICartService cartService;
 
     @PostMapping("/add")
     @ApiOperation("新增购物车商品")
