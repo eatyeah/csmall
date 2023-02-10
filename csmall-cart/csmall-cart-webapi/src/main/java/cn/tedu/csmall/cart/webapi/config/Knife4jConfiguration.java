@@ -24,7 +24,7 @@ public class Knife4jConfiguration {
     /**
      * 【重要】指定Controller包路径
      */
-    private String basePackage = "cn.tedu.csmall.cart.controller";
+    private String basePackage = "cn.tedu.csmall.cart.webapi.controller";
     /**
      * 分组名称
      */
