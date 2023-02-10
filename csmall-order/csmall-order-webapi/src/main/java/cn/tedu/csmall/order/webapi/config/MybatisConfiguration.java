@@ -1,4 +1,4 @@
-package cn.tedu.csmall.order.config;
+package cn.tedu.csmall.order.webapi.config;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;
@@ -11,6 +11,6 @@ import org.springframework.context.annotation.Configuration;
  */
 
 @Configuration
-@MapperScan("cn.tedu.csmall.order.mapper")
+@MapperScan("cn.tedu.csmall.order.webapi.mapper")
 public class MybatisConfiguration {
 }

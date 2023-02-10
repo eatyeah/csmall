@@ -1,4 +1,4 @@
-package cn.tedu.csmall.order.mapper;
+package cn.tedu.csmall.order.webapi.mapper;
 
 import cn.tedu.csmall.commons.pojo.pojo.order.model.Order;
 import org.apache.ibatis.annotations.Insert;

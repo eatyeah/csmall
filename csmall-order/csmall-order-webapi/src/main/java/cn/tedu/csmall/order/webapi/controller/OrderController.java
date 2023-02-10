@@ -1,4 +1,4 @@
-package cn.tedu.csmall.order.controller;
+package cn.tedu.csmall.order.webapi.controller;
 
 import cn.tedu.csmall.commons.pojo.pojo.order.dto.OrderAddDTO;
 import cn.tedu.csmall.commons.restful.JsonResult;

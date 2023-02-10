@@ -1,4 +1,4 @@
-package cn.tedu.csmall.order.config;
+package cn.tedu.csmall.order.webapi.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
