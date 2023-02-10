@@ -23,8 +23,3 @@ dubbo:
   consumer:
     # 设置当前项目启动时，是否检查服务提供者是否存在，一般设置为false，表示不检查，以减少因为服务提供者未启动而导致的启动失败
     check: false
-
-    # 设置注册中心的协议，一般固定为nacos
-    protocol: nacos
-    # 设置注册中心的名称，一般固定为nacos
-    name: nacos
