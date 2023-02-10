@@ -11,6 +11,6 @@ import org.springframework.context.annotation.Configuration;
  */
 
 @Configuration
-@MapperScan("cn.tedu.csmall.stock.mapper")
+@MapperScan("cn.tedu.csmall.stock.webapi.mapper")
 public class MybatisConfiguration {
 }
