@@ -2,8 +2,8 @@ package cn.tedu.csmall.order.webapi.service.impl;
 
 import cn.tedu.csmall.commons.pojo.pojo.order.dto.OrderAddDTO;
 import cn.tedu.csmall.commons.pojo.pojo.order.model.Order;
-import cn.tedu.csmall.order.mapper.OrderMapper;
 import cn.tedu.csmall.order.service.IOrderService;
+import cn.tedu.csmall.order.webapi.mapper.OrderMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
