@@ -9,5 +9,5 @@ import cn.tedu.csmall.commons.pojo.pojo.stock.dto.StockReduceCountDTO;
  * @Time: 13:52
  */
 public interface IStockService {
-    void reducecommodityCount(StockReduceCountDTO stockReduceCountDTO);
+    void reduceCommodityCount(StockReduceCountDTO stockReduceCountDTO);
 }

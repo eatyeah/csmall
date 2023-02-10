@@ -28,7 +28,7 @@ public class StockController {
     @ApiOperation("减少库存数")
     public JsonResult reduceStockCount(StockReduceCountDTO stockReduceCountDTO){
         // 调用减少库存的业务逻辑方法
-        stockService.reducecommodityCount(stockReduceCountDTO);
+        stockService.reduceCommodityCount(stockReduceCountDTO);
         return JsonResult.ok("减少库存成功");
     }
 
