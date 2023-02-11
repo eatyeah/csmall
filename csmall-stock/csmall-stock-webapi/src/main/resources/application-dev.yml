@@ -2,6 +2,12 @@ spring:
   application:
     name: nacos-stock # 定义当前服务名称
   cloud:
+    sentinel:
+      transport:
+        # 配置sentinel提供的仪表台服务器的位置
+        dashboard: localhost:18858
+        # 执行限流的端口号,每个项目必须设置不同的端口号,例如cart模块要限流就可以设置为8722
+        port: 8721
     nacos:
       discovery:
         server-addr: localhost:18848 # 指定正在运行的Nacos服务器的位置
