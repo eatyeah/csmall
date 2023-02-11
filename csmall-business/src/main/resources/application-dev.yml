@@ -21,3 +21,14 @@ dubbo:
     # 设置当前项目启动时,是否检查本项目需要的所有服务都可用
     # 设置它的值为false,表示不检查,以减少启动时因为需要的服务不可用导致的错误
     check: false
+
+seata:
+  # 定义事务的分组,一般是以项目为单位的,不同项目用它来区分
+  tx-service-group: csmall_group
+  service:
+    vgroup-mapping:
+      # 设置csmall_group分组使用默认(default)的seata配置
+      csmall_group: default
+    grouplist:
+      # 设置seata的ip和端口号位置
+      default: localhost:18091

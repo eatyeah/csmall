@@ -3,6 +3,7 @@ package cn.tedu.csmall.business.service.impl;
 import cn.tedu.csmall.business.service.IBusinessService;
 import cn.tedu.csmall.commons.pojo.order.dto.OrderAddDTO;
 import cn.tedu.csmall.order.service.IOrderService;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,12 @@ public class BusinessServiceImpl implements IBusinessService {
     @DubboReference
     private IOrderService dubboOrderService;
 
+    // Global:全局  Transactional:事务
+    // 一旦这个方法标记为 @GlobalTransactional
+    // 就相当于设置了分布式事务运行的起点,相当于AT事务模型中的TM(事务管理器)
+    // 最终效果就是当前方法开始后,所有远程调用操作数据库的功能,都在同一个事务中
+    // 也就是这些远程调用的数据库操作要么都执行,要么都不执行
+    @GlobalTransactional
     @Override
     public void buy() {
         // 模拟购买业务
