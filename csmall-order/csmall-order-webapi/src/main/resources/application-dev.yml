@@ -9,6 +9,7 @@ spring:
     url: jdbc:mysql://localhost:13306/csmall_db?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
     username: root
     password: 747641
+
 dubbo:
   protocol:
     port: -1
@@ -17,3 +18,14 @@ dubbo:
     address: nacos://localhost:18848
   consumer:
     check: false
+
+seata:
+  # 定义事务的分组,一般是以项目为单位的,不同项目用它来区分
+  tx-service-group: csmall_group
+  service:
+    vgroup-mapping:
+      # 设置csmall_group分组使用默认(default)的seata配置
+      csmall_group: default
+    grouplist:
+      # 设置seata的ip和端口号位置
+      default: localhost:18091
