@@ -19,8 +19,8 @@ public interface OrderMapper {
     // 分页查询所有订单的方法
     // PageHelper框架完成分页的原理是运行的sql语句后自动添加limit关键字
     // 所以我们在编写查询方法时,无需关注分页操作,和普通查询没有区别(注解和xml文件都是)
-    @Select("select id,user_id,commodity_code,count,money from order_tbl")
-    List<Order> findAllOrders();
+    // @Select("select id,user_id,commodity_code,count,money from order_tbl")
+    // List<Order> findAllOrders();
 
 
 }

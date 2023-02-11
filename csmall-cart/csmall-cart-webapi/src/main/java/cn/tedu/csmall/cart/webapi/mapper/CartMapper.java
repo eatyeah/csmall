@@ -6,24 +6,28 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
-/**
- * @Description:
- * @Author: sweeterjava@163.com
- * @Date: 2023/2/9
- * @Time: 14:09
- */
-
 @Repository
 public interface CartMapper {
+
     // 新增购物车商品的方法
-    @Insert("insert into cart_tbl(commodity_code, price, count, user_id) " +
-            "values(#{commodityCode}, #{price}, #{count}, #{userId})")
+    @Insert("insert into cart_tbl(commodity_code,price,count,user_id) values" +
+            "(#{commodityCode},#{price},#{count},#{userId})")
     int insertCart(Cart cart);
 
     // 删除购物车商品的方法
-    @Delete("delete from cart_tbl where user_id={userId} and commodity_code=#{commodityCode}")
+    @Delete("delete from cart_tbl where user_id=#{userId} and " +
+            " commodity_code=#{commodityCode}")
     int deleteCartByUserIdAndCommodityCode(
-            @Param("userId") String userId,
-            @Param("commodityCode") String commodityCode);
+                                  @Param("userId") String userId,
+                                  @Param("commodityCode") String commodityCode);
 
 }
+
+
+
+
+
+
+
+
+

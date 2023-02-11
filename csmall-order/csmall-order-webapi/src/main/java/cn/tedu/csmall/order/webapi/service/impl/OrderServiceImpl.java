@@ -50,11 +50,11 @@ public class OrderServiceImpl implements IOrderService {
         cartService.deleteUserCart(orderAddDTO.getUserId(),
                                     orderAddDTO.getCommodityCode());
 
-        if(Math.random()<0.5){
-            // 随机发生业务异常
-            throw new CoolSharkServiceException(
-                    ResponseCode.INTERNAL_SERVER_ERROR,"发生随机异常!");
-        }
+        // if(Math.random()<0.5){
+        //     // 随机发生业务异常
+        //     throw new CoolSharkServiceException(
+        //             ResponseCode.INTERNAL_SERVER_ERROR,"发生随机异常!");
+        // }
         // 3.新增订单信息
         Order order=new Order();
         BeanUtils.copyProperties(orderAddDTO,order);

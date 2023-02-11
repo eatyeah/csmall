@@ -1,7 +1,7 @@
 package cn.tedu.csmall.stock.webapi.service.Impl;
 
 import cn.tedu.csmall.commons.exception.CoolSharkServiceException;
-import cn.tedu.csmall.commons.pojo.pojo.stock.dto.StockReduceCountDTO;
+import cn.tedu.csmall.commons.pojo.stock.dto.StockReduceCountDTO;
 import cn.tedu.csmall.commons.restful.ResponseCode;
 import cn.tedu.csmall.stock.service.IStockService;
 import cn.tedu.csmall.stock.webapi.mapper.StockMapper;

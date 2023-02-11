@@ -1,6 +1,6 @@
 package cn.tedu.csmall.stock.webapi.controller;
 
-import cn.tedu.csmall.commons.pojo.pojo.stock.dto.StockReduceCountDTO;
+import cn.tedu.csmall.commons.pojo.stock.dto.StockReduceCountDTO;
 import cn.tedu.csmall.commons.restful.JsonResult;
 import cn.tedu.csmall.stock.service.IStockService;
 import io.swagger.annotations.Api;
