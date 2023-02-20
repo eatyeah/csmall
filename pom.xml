@@ -23,6 +23,7 @@
         <module>csmall-cart</module>
         <module>csmall-order</module>
         <module>gateway</module>
+        <module>search</module>
     </modules>
 
     <properties>
