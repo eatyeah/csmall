@@ -1,0 +1,15 @@
+# 配置ES的IP地址和端口号
+#spring:elasticsearch.rest.uris=http://localhost:19200
+spring:
+  elasticsearch:
+    rest:
+      uris: http://localhost:19200
+# 设置日志门槛
+#logging.level.org.elasticsearch=debug
+logging:
+  level:
+    org:
+      elasticsearch: debug
+
+# SpringDataElasticsearch框架中日志输出
+#logging.level.org.springframework.data.elasticsearch=debug
