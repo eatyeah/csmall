@@ -14,17 +14,9 @@ class SearchApplicationTests {
 
     // 执行单增
     @Test
-    void contextLoads() {
-        // 实力化一个Item对象
-        // Item item = new Item()
-        //         .setId(1L)
-        //         .setTitle("华为Mate40")
-        //         .setCategory("手机")
-        //         .setBrand("华为")
-        //         .setPrice(4999.00)
-        //         .setImgUrl("http://image.leyou.com/13123.jpg");
+    void addOne() {
         // 实例化Item对象
-        Item item = new Item()
+        Item item=new Item()
                 .setId(1L)
                 .setTitle("罗技激光无线游戏鼠标")
                 .setCategory("鼠标")
