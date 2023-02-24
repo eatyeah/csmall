@@ -80,3 +80,26 @@ Content-Type: application/json
 }
 ### 查询数据
 GET http://localhost:19200/questions/_doc/4
+
+### 收索 ES
+POST http://localhost:19200/questions/_search
+Content-Type: application/json
+
+{
+  "query": { "match": {"title": "类型" } }
+}
+
+### 多字段搜索
+POST http://localhost:19200/questions/_search
+Content-Type: application/json
+
+{
+  "query": {
+    "bool": {
+      "should": [
+        { "match": { "title":  "java类型" }},
+        { "match": { "content": "java类型"}}
+      ]
+    }
+  }
+}
