@@ -49,5 +49,5 @@ public class Item implements Serializable {
 
     // index = false表示不需要索引,不需要索引的属性不会被搜索
     @Field(type = FieldType.Keyword, index = false)
-    private String imgUrl;
+    private String imgPath;
 }
