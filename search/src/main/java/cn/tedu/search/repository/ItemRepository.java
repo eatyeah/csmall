@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 // Repository是Spring家族对持久层包名\类名\接口名的规范
 @Repository
-public interface ItemRepository extends ElasticsearchRepository<Item,Long> {
+public interface ItemRepository extends ElasticsearchRepository<Item, Long> {
     // ItemRepository接口要继承SpringData框架提供的父接口ElasticsearchRepository
     // 一旦继承,当前接口就可以编写使用父接口中提供的连接ES的方法了
     // 继承父接口后,SpringData会根据我们在泛型中指定的Item实体类,找到对应的索引
@@ -33,11 +33,11 @@ public interface ItemRepository extends ElasticsearchRepository<Item,Long> {
     // 多个条件时,方法名要按照规则编写多个条件,参数也要对应条件数量来变化
     // 声明的参数会按照顺序依次赋值到需要值的条件中,和参数名称无关
     Iterable<Item> queryItemsByTitleMatchesAndBrandMatches(
-                                                String title,String brand);
+            String title, String brand);
 
     // 排序查询
     Iterable<Item> queryItemsByTitleMatchesOrBrandMatchesOrderByPriceDesc(
-                                                String title,String brand);
+            String title, String brand);
 
 
     // 分页查询
@@ -46,7 +46,7 @@ public interface ItemRepository extends ElasticsearchRepository<Item,Long> {
     // 参数方面,需要在参数列表末尾添加一个Pageable类型的参数
     // 这个类型的对象包含要查询的页码和每页的条数
     Page<Item> queryItemsByTitleMatchesOrBrandMatchesOrderByPriceDesc(
-                                         String title, String brand, Pageable pageable);
+            String title, String brand, Pageable pageable);
 
 
 }

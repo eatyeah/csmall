@@ -61,12 +61,30 @@ class SearchApplicationTests {
 
     // 查询所有
     @Test
-    void getAll(){
+    void getAll() {
         // SpringData框架提供的全查ES中对应实体类所有数据的方法
         Iterable<Item> items = itemRepository.findAll();
-        for (Item item : items){
+        for (Item item : items) {
             System.out.println(item);
         }
+    }
+
+    // 单条件自定义查询
+    @Test
+    void queryOne() {
+        Iterable<Item> items = itemRepository.queryItemsByTitleMatches("游戏");
+        items.forEach(item -> {
+            System.out.println(item);
+        });
+    }
+
+    // 多条件自定义查询
+    @Test
+    void queryTwo() {
+        // 查询ES中,items的索引里,title字段包含"游戏",并且品牌是"罗技"的数据
+        Iterable<Item> items = itemRepository
+                .queryItemsByTitleMatchesAndBrandMatches("游戏", "罗技");
+        items.forEach(item -> System.out.println(item));
     }
 
 }
