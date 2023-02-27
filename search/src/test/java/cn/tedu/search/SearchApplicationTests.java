@@ -32,18 +32,19 @@ class SearchApplicationTests {
         System.out.println("ok");
     }
 
+    // 根据id查询
     @Test
     void getOne() {
-        // 根据id查询
         // findById方法返回值是Optional对象,声明了泛型,泛型就是查询的实体类，理解为只能保存一个该泛型对象的集合
         Optional<Item> optional = itemRepository.findById(1L);
         Item item = optional.get();
         System.out.println(item);
     }
 
+    // 批量新增
     @Test
     void addList() {
-        // 批量新增
+
         // 实例化一个List,把要保存到Es中的数据都添加到这个集合中
         List<Item> list = new ArrayList<>();
         list.add(new Item(2L, "罗技激光有线办公鼠标", "鼠标",
@@ -56,6 +57,16 @@ class SearchApplicationTests {
                 "罗技", 228.0, "/5.jpg"));
         itemRepository.saveAll(list);
         System.out.println("ok");
+    }
+
+    // 查询所有
+    @Test
+    void getAll(){
+        // SpringData框架提供的全查ES中对应实体类所有数据的方法
+        Iterable<Item> items = itemRepository.findAll();
+        for (Item item : items){
+            System.out.println(item);
+        }
     }
 
 }
