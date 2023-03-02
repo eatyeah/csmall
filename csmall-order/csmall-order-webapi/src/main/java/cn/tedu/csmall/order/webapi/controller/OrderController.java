@@ -1,6 +1,7 @@
 package cn.tedu.csmall.order.webapi.controller;
 
 import cn.tedu.csmall.commons.pojo.order.model.Order;
+import cn.tedu.csmall.commons.restful.JsonPage;
 import cn.tedu.csmall.commons.restful.JsonResult;
 import cn.tedu.csmall.order.service.IOrderService;
 import cn.tedu.csmall.order.webapi.service.impl.OrderServiceImpl;
@@ -21,11 +22,11 @@ import cn.tedu.csmall.commons.pojo.order.dto.OrderAddDTO;
 @Api(tags = "订单管理模块")
 public class OrderController {
     @Autowired
-    private OrderServiceImpl orderService;
+    private IOrderService orderService;
 
     @PostMapping("/add")
     @ApiOperation("新增订单功能")
-    public JsonResult orderAdd(OrderAddDTO orderAddDTO){
+    public JsonResult orderAdd(OrderAddDTO orderAddDTO) {
         orderService.orderAdd(orderAddDTO);
         return JsonResult.ok("新增订单完成!");
     }
@@ -33,13 +34,12 @@ public class OrderController {
     @GetMapping
     @ApiOperation("分页查询所有订单")
     @ApiImplicitParams({
-            @ApiImplicitParam(value = "页码",name="page",example ="1" ),
-            @ApiImplicitParam(value = "每页条数",name="pageSize",example ="10" )
+            @ApiImplicitParam(value = "页码", name = "page", example = "1"),
+            @ApiImplicitParam(value = "每页条数", name = "pageSize", example = "10")
     })
-    public JsonResult<PageInfo<Order>> pageOrder(Integer page,Integer pageSize){
-        PageInfo<Order> pageInfo=
-                orderService.getAllOrdersByPage(page, pageSize);
-        return JsonResult.ok("查询完成",pageInfo);
+    public JsonResult<JsonPage<Order>> pageOrder(Integer page, Integer pageSize) {
+        JsonPage<Order> jsonPage = orderService.getAllOrdersByPage(page, pageSize);
+        return JsonResult.ok("查询完成", jsonPage);
     }
 
 }
